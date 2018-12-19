@@ -64,6 +64,10 @@
 	  speechText.value = finalTranscript ;
     }
     recognition.start();
+	
+	recognition.onend = (event) => {
+     recognition.start();
+	}
   </script>
   <div id="speech">
 	<input type="text" id="interimText" class="interimText" /> 
