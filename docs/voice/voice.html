@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speech Recording</title>
+	
+	<style>
+	body {
+		background-color: teal;
+	}
+	
+	.interimText {
+		background-color : white;
+		width: 95%;
+		height: 20%;
+		min-height: 50px;
+	}
+	
+	.speechText {
+		background-color : white;
+		width: 95%;
+		height: 10%;
+		min-height: 10%;
+		
+	}
+	
+	</style>
+	
+</head>
+<body>
+  <script>
+    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+    let finalTranscript = '';
+    let recognition = new window.SpeechRecognition();
+
+	console.log(recognition);
+    recognition.interimResults = true;
+	//te-IN telugu
+	//es-ES Spanish
+	//fr-FR french - french
+	recognition.lang = 'en-GB';
+	//recognition.lang = 'fr-Fr';
+	
+	//https://cloud.google.com/speech-to-text/docs/languages
+	
+	
+    recognition.maxAlternatives = 10;
+    recognition.continuous = true;
+
+    recognition.onresult = (event) => {
+      let interimTranscript = '';
+      for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+        let transcript = event.results[i][0].transcript;
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript;
+        } else {
+          interimTranscript += transcript;
+        }
+      }
+	  document.getElementById('interimText').value = interimTranscript;
+      let speechText = document.getElementById('speechText');
+	  speechText.focus();
+	  speechText.value = '';
+	  speechText.value = finalTranscript ;
+    }
+    recognition.start();
+  </script>
+  <div id="speech">
+	<input type="text" id="interimText" class="interimText" /> 
+	<textarea  rows="25" cols="55" id="speechText" class="speechText"  wrap="hard"></textarea>
+  </div>
+</body>
+</html>
