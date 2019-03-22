@@ -17,7 +17,7 @@
     </header>
 
     <div class="w3-container w3-card">
-     <ul class="w3-ul w3-xxlarge" ng-if="word.count==0" ng-repeat="word in words | filter: {count:0 } | limitTo:3" ng-swipe-right="right(word)">
+     <ul class="w3-ul w3-xxlarge" ng-repeat="word in words | filter: {count:0 } | limitTo:3" ng-swipe-right="right(word)">
 	  <li>{{word.name}} <span class="w3-badge w3-large w3-lime">{{word.count}}</span></li>
 	</ul>
     </div>
