@@ -102,10 +102,10 @@
 {"name": "therefore", "Year":["3","4" ],"count":1,"learned": ["21-03-2019"] },
 {"name": "though/although", "Year":["3","4" ],"count":1,"learned": ["21-03-2019"]},
 {"name": "although", "Year":["3","4" ],"count":1 ,"learned": ["21-03-2019"]}, 
-{"name": "thought", "Year":["3","4" ],"count":0 ,"learned": ["21-03-2019"]},
-{"name": "through", "Year":["3","4" ],"count":0 },
-{"name": "various", "Year":["3","4" ],"count":0 },
-{"name": "weight", "Year":["3","4" ],"count":0 },
-{"name": "woman/women", "Year":["3","4" ],"count":0 },
-{"name": "women" , "Year":["3","4" ],"count":0 }
+{"name": "thought", "Year":["3","4" ],"count":2 ,"learned": ["21-03-2019","22-03-2019"]},
+{"name": "through", "Year":["3","4" ],"count":1 ,"learned": ["22-03-2019"]},
+{"name": "various", "Year":["3","4" ],"count":1, "learned": ["22-03-2019"] },
+{"name": "weight", "Year":["3","4" ],"count":1 ,"learned": ["22-03-2019"] },
+{"name": "woman/women", "Year":["3","4" ],"count":1 ,"learned": ["22-03-2019"] },
+{"name": "women" , "Year":["3","4" ],"count":1,"learned": ["22-03-2019"] }
 ]
